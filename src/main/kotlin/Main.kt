@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
     val musicAddict = false
     val purchase = 10002
 
@@ -6,5 +6,6 @@ fun main(args: Array<String>) {
     else if (purchase > 10_001) (purchase * 0.95).toInt()
     else purchase
 
-    if (musicAddict) println(result*0.99) else println (result)
+    val final = if (musicAddict) (result*0.99) else result
+    println ("Стоимость Вашей покупки: $final руб.")
 }
